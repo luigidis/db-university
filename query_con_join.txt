@@ -1,0 +1,23 @@
+1) SELECT COUNT(students.id) as studenti
+FROM `students`
+INNER JOIN `degrees`
+ON degrees.id = students.degree_id
+WHERE students.degree_id = 53;
+
+2) SELECT * 
+FROM `degrees`
+INNER JOIN `departments`
+ON  departments.id = degrees.department_id
+WHERE departments.id = 7 AND degrees.level = 'magistrale';
+
+3) SELECT * 
+FROM `course_teacher`
+INNER JOIN `teachers`
+ON course_teacher.teacher_id = teachers.id
+WHERE teachers.id = 44;
+
+4) SELECT * 
+FROM `students`
+INNER JOIN `degrees`
+ON degrees.id = students.degree_id
+ORDER  BY students.surname, students.name;
